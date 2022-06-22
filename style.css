@@ -1,11 +1,31 @@
+header li {
+  list-style: none;
+}
+a:link, a:visited {
+  text-decoration: none;
+  background-color: green;
+  border: 1px solid blue;
+  color: black;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 1px;
+}
 
-/* any article element which is a direct child of a section element,i.e., any article element whose immediate parent is a section element. */
-section > article {
-  color: green;
+a:hover, a:active {
+  background-color: red;
+  color: purple;
+}
+
+header li:nth-child(3) {
   font-size: 24px;
 }
 
-/* any h2 element which is a direct child of a section element,i.e., any h2 element whose immediate parent is a section element. */
-section > h2 {
-  color: green;
+section div:nth-child(odd) {
+  background-color: gray;
+}
+
+section div:nth-child(4):hover {
+  background-color: green;
+  cursor: pointer;
 }
