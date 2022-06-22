@@ -1,15 +1,3 @@
-/* all with class="highlight" */
-.highlight {
-  background-color: green;
-}
-
-/* all p elements with class="highlight" */
-p.highlight {  
-  font-style: italic;
-}
-
-/* all elements with class 'highlight' as well as with class 'mainpoint'. */
-.mainpoint.highlight {
-  color: red;
-  background-color: black;
+section li {
+  color: green;
 }
