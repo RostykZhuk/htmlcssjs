@@ -1,28 +1,15 @@
-h2 {
-  color: red;
-  text-align: center;
-}
-
-
 /* all with class="highlight" */
 .highlight {
-  font-size: 20px;
-  font-weight: bold;
-  font-style: italic;
   background-color: green;
-  opacity: .6;
 }
 
-/* element with id="mainPoint" */
-#mainPoint {
-  font-size: 24px;
-  font-weight: bold;
-  background-color: red;
-  opacity: .7;
+/* all p elements with class="highlight" */
+p.highlight {  
+  font-style: italic;
 }
 
-/* all p AND h1 elements */
-p, h1 {
-  color: blue;
-  text-align: center;
+/* all elements with class 'highlight' as well as with class 'mainpoint'. */
+.mainpoint.highlight {
+  color: red;
+  background-color: black;
 }
