@@ -1,31 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin-bottom: 15px;
+}
 
-div {
+div#container {
   background-color: #00FFFF;
+  position: relative;
+  top: 60px;
 }
 p {
   width: 50px;
   height: 50px;
   border: 1px solid black;
+  margin-bottom: 15px;
 }
-
 #p1 {
   background-color: #A52A2A;
-  float: left;
-  height: 150px;
+  position: relative;
+  top: 65px;
+  left: 65px;
 }
 #p2 {
   background-color: #DEB887;
-  float: right;
-  height: 100px;
 }
 #p3 {
   background-color: #5F9EA0;
-  clear: both;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #p4 {
   background-color: #FF7F50;
-}
-
-section {
-  clear: left;
 }
