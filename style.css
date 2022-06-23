@@ -1,38 +1,45 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/********** Base styles **********/
 h1 {
   margin-bottom: 15px;
 }
 
-div#container {
-  background-color: #00FFFF;
-  position: relative;
-  top: 60px;
-}
 p {
-  width: 50px;
-  height: 50px;
   border: 1px solid black;
   margin-bottom: 15px;
 }
 #p1 {
   background-color: #A52A2A;
-  position: relative;
-  top: 65px;
-  left: 65px;
+  width: 300px;
+  height: 300px;
 }
 #p2 {
   background-color: #DEB887;
+  width: 50px;
+  height: 50px;
 }
-#p3 {
-  background-color: #5F9EA0;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  #p1 {
+    width: 80%;
+  }
+  #p2 {
+    width: 150px;
+    height: 150px;
+  }
 }
-#p4 {
-  background-color: #FF7F50;
+
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #p1 {
+    width: 50%;
+  }
+  #p2 {
+    width: 100px;
+    height: 100px;
+  }
+  body {
+    background-color: blue;
+  }
 }
