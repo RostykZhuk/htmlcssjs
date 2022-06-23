@@ -1,23 +1,29 @@
 
-* {
-  box-sizing: border-box;
-}
-
 div {
-  /*background-color: #00FFFF;*/
+  background-color: #00FFFF;
 }
 p {
-  width: 50%;
-  /*border: 1px solid black;*/
-  float: left;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
 }
 
 #p1 {
-  /*background-color: #A52A2A;*/
+  background-color: #A52A2A;
+  float: left;
+  height: 150px;
 }
 #p2 {
-  /*background-color: #DEB887;*/
+  background-color: #DEB887;
+  float: right;
+  height: 100px;
+}
+#p3 {
+  background-color: #5F9EA0;
+  clear: both;
+}
+#p4 {
+  background-color: #FF7F50;
 }
 
 section {
