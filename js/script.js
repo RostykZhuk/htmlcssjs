@@ -1,20 +1,22 @@
-// Function constructors
-function Circle (radius) {
-    this.radius = radius;
-  }
+// Object literals and "this"
+var literalCircle = {
+    radius: 10,
   
-  Circle.prototype.getArea = 
-    function () {
+    getArea: function () {
+      var self = this;
+      console.log(this);
+  
+      var increaseRadius = function () {
+        self.radius = 20;
+      };
+      increaseRadius();
+      console.log(this.radius);
+  
       return Math.PI * Math.pow(this.radius, 2);
-    };
+    }
+  };
   
-  
-  var myCircle = new Circle(10);
-  console.log(myCircle.getArea());
-  
-  var myOtherCircle = new Circle(20);
-  console.log(myOtherCircle);
-  
+  console.log(literalCircle.getArea());
   
   
   
