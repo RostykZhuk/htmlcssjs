@@ -19,17 +19,56 @@ a{
 }
 .container{
     max-width: var(--header-container);
-    padding: 12px var(--header-padding);
+    padding: 0 var(--header-padding);
     margin: 0 auto;
 }
+
+/* header */
+
 .header{
     color:var(--grey-color);
     background-color: var(--header-top-bg-color) ;
 }
 .header-top{
+    padding: 12px 0;
     display: flex;
     column-gap: 809px;
 }
+.header-middle{
+    background-color:var(--white-color);
+    display: flex;
+    column-gap: 50px;
+    margin: 30px 0;
+
+}
+.header-info{
+    margin: 10px 20px;
+}
+.header-input{
+    width: 496px;
+    height: 44px;
+    padding: 14px;
+    border: 1px solid #989898;
+    border-radius: 5px;
+    color: #989898;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.header-icons{
+    display: flex;
+    column-gap: 50px;
+    margin-top: 20px;
+}
+.header-search{
+    margin-top: 10px;
+  }
+
+
+
+/*  */
+
+
 .ul-top-one{
     display: flex;
     column-gap: 30px;
@@ -48,34 +87,50 @@ a{
 .cash-score{
     font-weight: 700;
 }
-.header-middle{
-    background-color:var(--white-color);
-    display: flex;
-    column-gap: 50px;
-    align-items: center;
-    margin: 30px 0;
-}
-.header-input{
-    width: 496px;
-    height: 44px;
-    padding: 14px;
-    border: 1px solid #989898;
-    border-radius: 5px;
-    color: #989898;
-    font-weight: 400;
-    font-size: 13px;
-}
+
 .search{
     width: 440px;
     color:inherit;
     font-weight: 400;
     font-size: 13px;
 }
+.info-tel{
+    font-size: 22px;
+    margin-bottom: 10px;
+
+}
 .bi-search{
     color: #989898;
 }
 .bi-heart, .bi-sliders2-vertical, .bi-cart2{
     padding: 10px;
-    border:1px solid #D8D8D8;
+    border:2px solid #D8D8D8;
     border-radius: 50%;
 }
+.bi-caret-down{
+    margin-left: 8px;
+}
+.hidden{
+    display: none;
+    margin: 10px 0;
+}
+.show{
+    display: block;
+}
+.info-work{
+    font-size: 14px;
+}
+
+.cart{
+    position: relative;
+}
+.cartAmount {
+    position: absolute;
+    top: -25px;
+    right: -5px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+  }
