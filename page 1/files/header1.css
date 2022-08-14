@@ -1,0 +1,81 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nova+Square&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Red+Hat+Display:wght@400;600;700&family=Roboto&display=swap');
+
+:root{
+    --header-container : 1460px;
+    --header-top-bg-color : #F7F7F7;
+    --header-padding : 10px;
+    --black-color:#000000;
+    --white-color:#ffffff;
+    --grey-color:#747474;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 16px;
+    font-size: 14px;
+}
+a{
+    color: inherit;
+}
+.container{
+    max-width: var(--header-container);
+    padding: 12px var(--header-padding);
+    margin: 0 auto;
+}
+.header{
+    color:var(--grey-color);
+    background-color: var(--header-top-bg-color) ;
+}
+.header-top{
+    display: flex;
+    column-gap: 809px;
+}
+.ul-top-one{
+    display: flex;
+    column-gap: 30px;
+}
+.ul-top-two{
+    display: flex;
+    column-gap: 30px;
+}
+.lang{
+    border-left: #747474 1px solid;
+    padding-left: 5px;
+    margin-left: -25px;
+    color:var(--black-color);
+    font-weight: 700;
+}
+.cash-score{
+    font-weight: 700;
+}
+.header-middle{
+    background-color:var(--white-color);
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+    margin: 30px 0;
+}
+.header-input{
+    width: 496px;
+    height: 44px;
+    padding: 14px;
+    border: 1px solid #989898;
+    border-radius: 5px;
+    color: #989898;
+    font-weight: 400;
+    font-size: 13px;
+}
+.search{
+    width: 440px;
+    color:inherit;
+    font-weight: 400;
+    font-size: 13px;
+}
+.bi-search{
+    color: #989898;
+}
+.bi-heart, .bi-sliders2-vertical, .bi-cart2{
+    padding: 10px;
+    border:1px solid #D8D8D8;
+    border-radius: 50%;
+}
