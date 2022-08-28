@@ -17,8 +17,9 @@
 }
 .header-wrapper {
   display: flex;
-  column-gap: 257px;
+
   align-items: center;
+  justify-content: space-between;
 }
 .header-nav ul {
   display: flex;

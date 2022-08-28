@@ -1,1 +1,51 @@
-@import url(./reset.css);
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nova+Square&family=PT+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&family=Red+Hat+Display:wght@400;600;700&family=Roboto&display=swap');
+
+:root {
+  --main-container-width: 1170px;
+  --main-container-width-2: 1360px;
+}
+.main-container {
+  max-width: var(--main-container-width);
+  margin: 0 auto;
+}
+.main-container-two {
+  max-width: var(--main-container-width-2);
+  margin: 0 auto;
+}
+.main-info-wrapper {
+  display: flex;
+  background: #f7f7f7;
+  border-radius: 48px;
+}
+.main-content-one {
+  margin-top: 101px;
+}
+.info-wrapper-left {
+  margin-left: 70px;
+}
+.main-title {
+  font-weight: 700;
+  font-size: 44px;
+  margin-top: 110px;
+  margin-bottom: 24px;
+  width: 442px;
+  height: 150px;
+}
+.main-text {
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 58px;
+}
+.main-button {
+  background: #fcc344;
+  border-radius: 16px;
+  padding: 17px 39px;
+  width: 186px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-content-two {
+  margin-top: 154px;
+}
