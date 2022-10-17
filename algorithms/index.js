@@ -1,39 +1,21 @@
-// Use a stack to find the maximum numeric value in an array of arrays
-function findMax2(arElements)
-{
-    var max = -Infinity;
+// program to find the factorial of a number
+function factorial(x) {
 
-    // This is the stack on which will put the first array and then 
-    // all the other sub-arrays that we find as we traverse an array     
-    var arrays = [];
-
-    arrays.push(arElements);
-
-    // Loop as long as are arrays added to the stack for processing
-    while(arrays.length > 0)
-    {
-        // Extract an array from the stack
-        ar = arrays.pop();
-
-        // ... and loop through its elements
-        for(var i = 0; i < ar.length; i++)
-        {
-            var el = ar[i];
-
-            // If an element is of type array, we'll add it to stack
-            // to be processed later
-            if ( Array.isArray(el) )
-            {
-                arrays.push(el);
-                continue;
-            }
-
-            if ( el > max )
-            {
-                max = el;
-            }
-        }
+    // if number is 0
+    if (x === 0) {
+        return 1;
     }
 
-    return max;
+    // if number is positive
+    else {
+        return x * factorial(x - 1);
+    }
+}
+
+const num = 3;
+
+// calling factorial() if num is non-negative
+if (num > 0) {
+    let result = factorial(num);
+    console.log(`The factorial of ${num} is ${result}`);
 }
