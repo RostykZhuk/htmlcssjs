@@ -1,13 +1,25 @@
-function findFibonacci(n)
+var ar = [23, 1000, 1, -1, 8, 3];
+console.log(ar);
+bubbleSort(ar);
+console.log(ar);
+
+function bubbleSort(ar)
 {
-    if (n == 0)
-        return 0;
+    var shouldSort = true;
 
-    if (n == 1)
-        return 1;
+    while(shouldSort)
+    {
+        shouldSort = false;
 
-    return findFibonacci(n - 1) + findFibonacci(n - 2);
+        for(var i = 0; i < ar.length - 1; i++)
+        {
+            var a = ar[i];
+            if ( a > ar[i+1] )
+            {
+                ar[i] = ar[i+1];
+                ar[i+1] = a;
+                shouldSort = true;
+            }
+        }
+    }
 }
-
-var n = findFibonacci(10);
-println(n);
