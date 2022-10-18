@@ -1,21 +1,13 @@
-// program to find the factorial of a number
-function factorial(x) {
+function findFibonacci(n)
+{
+    if (n == 0)
+        return 0;
 
-    // if number is 0
-    if (x === 0) {
+    if (n == 1)
         return 1;
-    }
 
-    // if number is positive
-    else {
-        return x * factorial(x - 1);
-    }
+    return findFibonacci(n - 1) + findFibonacci(n - 2);
 }
 
-const num = 3;
-
-// calling factorial() if num is non-negative
-if (num > 0) {
-    let result = factorial(num);
-    console.log(`The factorial of ${num} is ${result}`);
-}
+var n = findFibonacci(10);
+println(n);
