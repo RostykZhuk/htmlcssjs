@@ -1,25 +1,30 @@
-var ar = [23, 1000, 1, -1, 8, 3];
-console.log(ar);
-bubbleSort(ar);
-console.log(ar);
+var ar = [2, 4, 10, [12, 4, [100, 99], 4], [3, 2, 99], 0];
 
-function bubbleSort(ar)
+var max = findMax(ar);
+println("Max  = ", max);
+
+// Use recursion to find the maximum numeric value in an array of arrays
+function findMax(ar)
 {
-    var shouldSort = true;
+    var max = -Infinity;
 
-    while(shouldSort)
+    // Cycle through all the elements of the array
+    for(var i = 0; i < ar.length; i++)
     {
-        shouldSort = false;
+        var el = ar[i];
 
-        for(var i = 0; i < ar.length - 1; i++)
+        // If an element is of type array then invoke the same function
+        // to find out the maximum element of that subarray
+        if ( Array.isArray(el) )
         {
-            var a = ar[i];
-            if ( a > ar[i+1] )
-            {
-                ar[i] = ar[i+1];
-                ar[i+1] = a;
-                shouldSort = true;
-            }
+            el = findMax( el );
+        }
+
+        if ( el > max )
+        {
+            max = el;
         }
     }
+
+    return max;
 }
