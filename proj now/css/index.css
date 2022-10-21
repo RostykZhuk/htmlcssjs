@@ -1,0 +1,112 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --container-width: 1220px;
+  --container-padding: 10px;
+  --color: #303030;
+}
+body {
+  background: url(./../images/шум\ на\ фоне.svg);
+  background-color: #d9d9d9;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+.header {
+  padding: 40px var(--container-padding) 0px;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+}
+.header-navbar {
+  display: flex;
+  column-gap: 30px;
+  margin-left: 398px;
+}
+.header-navbar a {
+  text-decoration: none;
+  color: var(--color);
+  text-transform: capitalize;
+}
+.phone-number {
+  font-weight: 600;
+  margin-left: 81px;
+}
+.header-content {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-media {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: -80px;
+}
+.header-bg {
+  z-index: -1;
+}
+.header-img {
+  position: absolute;
+  margin-left: -100px;
+}
+.header-title {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  letter-spacing: 0.07em;
+  line-height: 110%;
+  font-size: 80px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.ss {
+  font-style: italic;
+  font-weight: 400;
+}
+.bold-title {
+  font-weight: 600;
+}
+
+.description-items {
+  display: flex;
+  column-gap: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  justify-content: end;
+  column-gap: 16px;
+}
+.header-btn {
+  position: absolute;
+  text-align: right;
+  padding: 26px 34px;
+  background-color: var(--color);
+  color: #fff;
+  font-weight: 550;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.header-button {
+  margin-top: 70px;
+  margin-left: 300px;
+  display: flex;
+}
+.header-btn:hover {
+  cursor: pointer;
+  color: #d9d9d9;
+}
+.header-btn-outline {
+  top: -10px;
+  left: -15px;
+  width: 237px;
+  height: 66px;
+  position: relative;
+  opacity: 0.5;
+  border: 1px solid #303030;
+}
