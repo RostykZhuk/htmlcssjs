@@ -224,7 +224,7 @@ Slider
   height: 100%;
   display: grid;
   place-items: center;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.5s ease-in-out;
   text-align: center;
 }
 
@@ -264,4 +264,180 @@ Slider
   border: 1px solid #303030;
   padding: 23px 50px;
   color: inherit;
+}
+
+/* slider 2 */
+
+#toggleContainer {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95vw;
+  position: absolute;
+}
+
+#galleryContainer {
+  height: 500px;
+  width: 800px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#galleryView {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#outer3.outerActive {
+  background-color: white;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+
+#mainView {
+  height: 450px;
+  width: 450px;
+  border-radius: 5px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+#mainView:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+#leftView {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(5deg);
+  transform-origin: top right;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#leftView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+#rightView {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(-5deg);
+  transform-origin: top left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#rightView:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.navBtns {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  opacity: 0.8;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.navBtns:hover {
+  opacity: 1;
+  transition: all 1s;
+  background-color: var(--color);
+}
+
+#navLeft {
+  left: 50px;
+}
+
+#navRight {
+  right: 50px;
+}
+
+#linkTag {
+  cursor: pointer;
+  z-index: 1;
+  box-sizing: border-box;
+}
+/* end of slider 2 */
+
+/* 3d product rendering */
+.carouseell {
+  margin-top: 250px;
+}
+.product-rendering-title {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 110%;
+  /* or 66px */
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: 500px;
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+.product-rendering-title > span {
+  font-weight: 500;
+  font-style: normal;
+}
+.product-rendering-description {
+  width: 495px;
+}
+.pr-rendering-btn {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle-btn {
+  margin-left: 0px;
+}
+.product-remdering-wrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 100px;
+}
+.rendering-ps {
+  padding: 22px 104px 22px 47px;
+  background: linear-gradient(
+    89.68deg,
+    #fbfbfb 49.07%,
+    rgba(251, 251, 251, 0) 97.72%
+  );
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  width: 721px;
+  margin-top: 40px;
 }
