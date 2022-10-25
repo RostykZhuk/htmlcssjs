@@ -214,9 +214,8 @@ Slider
   max-width: 80rem;
   margin-left: -100px;
   position: relative;
-  border-radius: 0.5rem;
+
   overflow: hidden;
-  margin-top: 4rem;
 }
 .slide {
   position: absolute;
@@ -224,6 +223,7 @@ Slider
   height: 100%;
   display: grid;
   place-items: center;
+
   transition: all 0.5s ease-in-out;
   text-align: center;
 }
@@ -256,7 +256,7 @@ Slider
 }
 @media screen and (min-width: 992px) {
   .slider-container {
-    height: 100vh;
+    height: 82vh;
   }
 }
 /* end of slider */
@@ -390,7 +390,109 @@ Slider
   box-sizing: border-box;
 }
 /* end of slider 2 */
+#toggleContainer1 {
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95vw;
+  position: absolute;
+}
 
+#galleryContainer1 {
+  height: 500px;
+  width: 800px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#galleryView1 {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#outer1.outerActive {
+  background-color: white;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+
+#mainView1 {
+  height: 450px;
+  width: 450px;
+  border-radius: 5px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 1;
+  transition: all 1s;
+}
+
+#mainView1:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+#leftView1 {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(5deg);
+  transform-origin: top right;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#leftView1:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+#rightView1 {
+  height: 400px;
+  width: 150px;
+  opacity: 0.5;
+  border-radius: 5px;
+  transform: skewy(-5deg);
+  transform-origin: top left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#rightView1:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+
+#navLeft1 {
+  left: 50px;
+}
+
+#navRight1 {
+  right: 50px;
+}
+
+#linkTag1 {
+  cursor: pointer;
+  z-index: 1;
+  box-sizing: border-box;
+}
 /* 3d product rendering */
 .carouseell {
   margin-top: 250px;
@@ -412,6 +514,9 @@ Slider
   font-style: normal;
 }
 .product-rendering-description {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color);
   width: 495px;
 }
 .pr-rendering-btn {
