@@ -251,12 +251,12 @@ Slider
 }
 @media screen and (min-width: 768px) {
   .slider-container {
-    height: 55vh;
+    height: 65vh;
   }
 }
 @media screen and (min-width: 992px) {
   .slider-container {
-    height: 82vh;
+    height: 1600px;
   }
 }
 /* end of slider */
@@ -563,10 +563,7 @@ Slider
   padding: 36px 40px 36px 28px;
 }
 .card-items {
-  padding-bottom: 60px;
-
-  width: 339px;
-  height: 335px;
+  margin-bottom: 40px;
 }
 li.card-item {
   list-style-type: circle;

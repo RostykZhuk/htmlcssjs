@@ -10,6 +10,7 @@ const data = [
     desc3: 'Processing of scan results',
     desc4: 'Preparing your model for 3D printing',
     price: '$700',
+    padding: '21px',
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const data = [
     desc3: `Storyboard`,
     desc4: `Sound design`,
     price: `$3000`,
+    padding: '26px',
   },
 ];
 
@@ -37,19 +39,19 @@ window.addEventListener('DOMContentLoaded', (x) => {
   contentInfo.innerHTML = data
     .map((e) => {
       // destructuring data\
-      let { name, price, desc1, desc2, desc3, desc4, img } = e;
+      let { name, price, desc1, desc2, desc3, desc4, img, padding } = e;
 
       return `
               <div class="price-card">
             <img src="${img}" alt="" class="card-img" />
             <h1 class="card-title">"${name}"</h1>
             <ul class="card-items">
-              <li class="card-item">${desc1}</li>
-              <li class="card-item">
+              <li class="card-item" style = "padding:${padding};">${desc1}</li>
+              <li class="card-item" style = "padding:${padding};">
            ${desc2}
               </li>
-              <li class="card-item">${desc3}</li>
-              <li class="card-item">${desc4}</li>
+              <li class="card-item" style = "padding:${padding};">${desc3}</li>
+              <li class="card-item" style = "padding:${padding};">${desc4}</li>
             </ul>
             <div class="card-price-wrapper">
               <div class="price-score">
