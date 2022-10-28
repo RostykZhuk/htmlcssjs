@@ -607,3 +607,62 @@ li.card-item {
 .card-title {
   text-transform: uppercase;
 }
+
+/* persons card info */
+.personal-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 37px;
+}
+.personal {
+  margin-top: 60px;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.personal-name {
+  font-weight: 550;
+  font-size: 30px;
+}
+.personal-priority {
+  font-weight: 300;
+  font-size: 16px;
+}
+.team-title {
+  width: auto;
+}
+.contacts-title {
+  font-weight: 550;
+  font-size: 30px;
+  margin: 80px 0 50px;
+  text-transform: uppercase;
+}
+.contacts-info {
+  display: flex;
+  column-gap: 80px;
+}
+.information {
+  font-weight: 300;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+/*  */
+.prioriry-wrapper {
+  display: flex;
+}
+.right-items {
+  margin-top: 300px;
+}
+.bg {
+  position: relative;
+  bottom: 320px;
+  left: 120px;
+  z-index: -1;
+}

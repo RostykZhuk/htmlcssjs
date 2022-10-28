@@ -1,4 +1,5 @@
 const contentInfo = document.querySelector('.cards-wrapper');
+const contentInfo2 = document.querySelector('.personal-wrapper');
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 const data = [
   {
@@ -34,6 +35,56 @@ const data = [
     padding: '26px',
   },
 ];
+
+const personal = [
+  {
+    id: 1,
+    img: './images/сотрудник1.png',
+    name: 'Cyril Genba',
+    priority: 'CMO',
+  },
+  {
+    id: 2,
+    img: './images/сотрудник2.png',
+    name: 'Yulia Volynskova',
+    priority: 'CPO',
+  },
+  {
+    id: 3,
+    img: './images/сотрудник3.png',
+    name: 'Max Volynsckova',
+    priority: 'CEO',
+    margin: '15px',
+  },
+  {
+    id: 4,
+    img: './images/сотрудник3.png',
+    name: ' Apas Yancauscas',
+    priority: 'Chief 3D designer',
+    margin: '15px',
+  },
+];
+
+window.addEventListener('DOMContentLoaded', (x) => {
+  contentInfo2.innerHTML = personal
+    .map((e) => {
+      // destructuring data\
+      let { name, img, priority, margin } = e;
+
+      return `
+              <div class="person">
+              <div class="person-img" style = "margin-top:${margin};">
+                <img src="${img}" alt="person" />
+              </div>
+              <div class="personal-name">
+                <p>${name}</p>
+                <p class="personal-priority">${priority}</p>
+              </div>
+            </div>
+            `;
+    })
+    .join('');
+});
 
 window.addEventListener('DOMContentLoaded', (x) => {
   contentInfo.innerHTML = data
