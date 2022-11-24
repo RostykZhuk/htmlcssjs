@@ -64,18 +64,32 @@
 // let a = Object.create(Animal.prototype); // Change this line
 // let b = Object.create(Animal.prototype); // Change this line
 
-function Animal() {}
+// function Animal() {}
 
-Animal.prototype = {
-  constructor: Animal,
-  eat: function () {
-    console.log('nom nom nom');
-  },
-};
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat: function () {
+//     console.log('nom nom nom');
+//   },
+// };
 
-function Dog() {}
+// function Dog() {}
 
-//instances of Dog inherit from Animal.
-Dog.prototype = Object.create(Animal.prototype);
+// //instances of Dog inherit from Animal.
+// Dog.prototype = Object.create(Animal.prototype);
 
-let beagle = new Dog();
+// let beagle = new Dog();
+// let name = 'Ваrtyrytyrtyся';
+// function sayHi() {
+//   console.log(name);
+// }
+
+// setTimeout(function () {
+//   let name = 'sd';
+//   sayHi();
+// }, 1000);
+
+// console.log('test message');
+// [1, 2, 3, 4, 5].forEach((el) => {
+//   console.log(el);
+// });

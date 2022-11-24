@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Big Comporation",
+    "numberOfEmployees": 10000,
+    "ceo": "Martin",
+    "rating": 4.1
+  },
+  {
+    "name": "Softpack",
+    "numberOfEmployees": 3,
+    "ceo": null,
+    "rating": 2.3
+  }
+]
