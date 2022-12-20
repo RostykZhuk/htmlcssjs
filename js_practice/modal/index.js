@@ -1,52 +1,60 @@
-const fruits = [
-  {
-    id: 1,
-    title: 'apples',
-    price: 20,
-    img: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fapple&psig=AOvVaw0k_DU0uOGG2LQ5IXVAcidY&ust=1671437530230000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCLjbrJXcgvwCFQAAAAAdAAAAABAE',
-  },
-  {
-    id: 2,
-    title: 'Oranges',
-    price: 30,
-    img: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.britannica.com%2F24%2F174524-050-A851D3F2%2FOranges.jpg&imgrefurl=https%3A%2F%2Fwww.britannica.com%2Fplant%2Forange-fruit&tbnid=DNiiMzJasQssuM&vet=12ahUKEwj0g-qg3IL8AhXkAhAIHQulB5kQMygDegUIARDJAQ..i&docid=U86k1P7L5gTu1M&w=1600&h=1064&q=Oranges&ved=2ahUKEwj0g-qg3IL8AhXkAhAIHQulB5kQMygDegUIARDJAQ',
-  },
-  {
-    id: 3,
-    title: 'Bananas',
-    price: 40,
-    img: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn1.sph.harvard.edu%2Fwp-content%2Fuploads%2Fsites%2F30%2F2018%2F08%2Fbananas-1354785_1920.jpg&imgrefurl=https%3A%2F%2Fwww.hsph.harvard.edu%2Fnutritionsource%2Ffood-features%2Fbananas%2F&tbnid=l4oYCU5P4owiQM&vet=12ahUKEwiQ572n3IL8AhXhlIsKHRdACTsQMygEegUIARDTAQ..i&docid=1KLMbt3mG7jfkM&w=1920&h=1280&q=bananas&ved=2ahUKEwiQ572n3IL8AhXhlIsKHRdACTsQMygEegUIARDTAQ',
-  },
-];
+let fruits = [
+  {id: 1, title: 'Яблоки', price: 20, img: 'https://e1.edimdoma.ru/data/ingredients/0000/2374/2374-ed4_wide.jpg?1487746348'},
+  {id: 2, title: 'Апельсины', price: 30, img: 'https://fashion-stil.ru/wp-content/uploads/2019/04/apelsin-ispaniya-kg-92383155888981_small6.jpg'},
+  {id: 3, title: 'Манго', price: 40, img: 'https://itsfresh.ru/upload/iblock/178/178d8253202ef1c7af13bdbd67ce65cd.jpg'},
+]
 
-const modal = $.modal({
-  title: "Rostyk's Modal",
+const toHTML = fruit => `
+  <div class="col">
+    <div class="card">
+      <img class="card-img-top" style="height: 300px;" src="${fruit.img}" alt="${fruit.title}">
+      <div class="card-body">
+        <h5 class="card-title">${fruit.title}</h5>
+        <a href="#" class="btn btn-primary" data-btn="price" data-id="${fruit.id}">Посмотреть цену</a>
+        <a href="#" class="btn btn-danger" data-btn="remove" data-id="${fruit.id}">Удалить</a>
+      </div>
+    </div>
+  </div>
+`
+
+function render() {
+  const html = fruits.map(toHTML).join('')
+  document.querySelector('#fruits').innerHTML = html
+}
+
+render()
+
+const priceModal = $.modal({
+  title: 'Цена на Товар',
   closable: true,
-  content: `  <p>Lorem ipsum dolor sir</p>
-  <p>Lorem ipsum dolor sir</p>`,
   width: '400px',
   footerButtons: [
-    {
-      text: 'Okey',
-      type: 'primary',
-      handler() {
-        console.log('Primaty btn clicked');
-        modal.close();
-      },
-    },
-    {
-      text: 'Cancel',
-      type: 'danger',
-      handler() {
-        console.log('Danger btn clicked');
-        modal.close();
-      },
-    },
-  ],
-});
-// all this paramethers are stored in options
+    {text: 'Закрыть', type: 'primary', handler() {
+      priceModal.close()
+    }}
+  ]
+})
 
+document.addEventListener('click', event => {
+  event.preventDefault()
+  const btnType = event.target.dataset.btn
+  const id = +event.target.dataset.id
+  const fruit = fruits.find(f => f.id === id)
 
-function render(){
-  
-}
+  if (btnType === 'price') {
+    priceModal.setContent(`
+      <p>Цена на ${fruit.title}: <strong>${fruit.price}$</strong></p>
+    `)
+    priceModal.open()
+  } else if (btnType === 'remove') {
+    $.confirm({
+      title: 'Вы уверены?',
+      content: `<p>Вы удаляете фрукт: <strong>${fruit.title}</strong></p>`
+    }).then(() => {
+      fruits = fruits.filter(f => f.id !== id)
+      render()
+    }).catch(() => {
+      console.log('Cancel')
+    })
+  }
+})
