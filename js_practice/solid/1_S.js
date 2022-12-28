@@ -65,3 +65,5 @@ class NewsPrinter {
   }
 }
 const printer = new NewsPrinter(('Rostyk', 'Gym records'));
+
+printer.html()
