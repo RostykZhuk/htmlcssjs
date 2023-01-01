@@ -34,5 +34,5 @@ class ComplaintRegistry {
 }
 
 const registry = new ComplaintRegistry();
-console.log(registry.register('Rostyk', 'Service', 'unusable'));
+console.log(registry.register('Rostyk', 'service', 'unusable'));
 console.log(registry.register('Dasha', 'product', 'Error'));
