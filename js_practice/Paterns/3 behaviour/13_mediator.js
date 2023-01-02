@@ -22,7 +22,7 @@ class ChatRoom {
     this.users[user.name] = user;
     user.room = this;
   }
-
+  W;
   send(message, from, to) {
     if (to) {
       to.receive(message, from);
